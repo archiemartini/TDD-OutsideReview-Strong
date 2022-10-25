@@ -3,6 +3,9 @@ const filterFrequencies = (frequencyArray, lowerLimit = 40, upperLimit = 1000) =
     throw new Error("Argument Error: first argument must be an array")
   }
     return frequencyArray.map((frequency) => {
+      if(frequency < 0) {
+        throw new Error("Argument Error: frequencies must be above 0")
+      }
       return filterFrequency(frequency, lowerLimit, upperLimit)
     })
 
