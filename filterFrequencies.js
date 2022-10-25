@@ -4,7 +4,9 @@ const filterFrequencies = (frequencyArray, lowerLimit = 40, upperLimit = 1000) =
   }
     return frequencyArray.map((frequency) => {
       if(frequency < 0) {
-        throw new Error("Argument Error: frequencies must be above 0")
+        throw new Error("Value Error: frequencies must be above 0")
+      } else if(!(typeof frequency == 'number') && isNaN(frequency)) {
+        throw new Error("Argument Error: frequencies must only be integers or floating points")
       }
       return filterFrequency(frequency, lowerLimit, upperLimit)
     })

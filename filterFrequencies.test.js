@@ -59,6 +59,10 @@ describe('the filterFrequencies function', () => {
   })
 
   it('throws a new error when a frequency is below 0', () => {
-    expect(() => {filterFrequencies([-1])}).toThrowError("Argument Error: frequencies must be above 0")
+    expect(() => {filterFrequencies([-1])}).toThrowError("Value Error: frequencies must be above 0")
+  })
+
+  it('throw an error if one of the passed frequencies is neither an integer or a floating point', () => {
+    expect(() => {filterFrequencies(["hello"])}).toThrowError("Argument Error: frequencies must only be integers or floating points")
   })
 })
