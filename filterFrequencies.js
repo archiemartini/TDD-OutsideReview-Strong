@@ -10,8 +10,9 @@ const filterFrequencies = (frequencyArray, lowerLimit = 40, upperLimit = 1000) =
       }
       return filterFrequency(frequency, lowerLimit, upperLimit)
     })
-
 }
+
+
 
 const isFloatOrInteger = (value) => {
   if(typeof value == 'number' && !isNaN(value)) {
