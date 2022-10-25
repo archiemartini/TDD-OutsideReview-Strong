@@ -1,8 +1,10 @@
 const filterFrequencies = (frequencyArray, lowerLimit = 40, upperLimit = 1000) => {
-
-  return frequencyArray.map((frequency) => {
-    return filterFrequency(frequency, lowerLimit, upperLimit)
-  })
+  if(!Array.isArray(frequencyArray)) {
+    throw new Error("Argument Error: first argument must be an array")
+  }
+    return frequencyArray.map((frequency) => {
+      return filterFrequency(frequency, lowerLimit, upperLimit)
+    })
 
 }
 

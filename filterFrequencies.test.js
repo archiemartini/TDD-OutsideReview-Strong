@@ -54,4 +54,8 @@ describe('the filterFrequencies function', () => {
     expect(filterFrequencies([50, 1500, 1])).toEqual([50, 1000, 40])
   })
 
+  it('throw a new error when the first argument is not an array', () => {
+    expect(() => {filterFrequencies("Hello", 20, 50)}).toThrowError("Argument Error: first argument must be an array")
+  })
+
 })
