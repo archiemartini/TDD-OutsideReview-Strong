@@ -2,25 +2,22 @@ const filterFrequencies = (frequencyArray, lowerLimit = 40, upperLimit = 1000) =
   let lengthOfArray = frequencyArray.length
 
   if(lengthOfArray == 1) {
-    if(frequencyArray < lowerLimit) {
-      return [lowerLimit]
-    } else if (frequencyArray > upperLimit) {
-      return [upperLimit]
-    }
+    frequencyArray[0] = filterFrequency(frequencyArray[0], lowerLimit, upperLimit)
     return frequencyArray
   } else if(lengthOfArray == 2) {
-    if(frequencyArray[0] < lowerLimit) {
-      frequencyArray[0] = lowerLimit
-    } else if (frequencyArray[0] > upperLimit) {
-      frequencyArray[0] = upperLimit
-    }
-    if(frequencyArray[1] < lowerLimit) {
-      frequencyArray[1] = lowerLimit
-    } else if (frequencyArray[1] > upperLimit) {
-      frequencyArray[1] = upperLimit
-    }
+    frequencyArray[0] = filterFrequency(frequencyArray[0], lowerLimit, upperLimit)
+    frequencyArray[1] = filterFrequency(frequencyArray[1], lowerLimit, upperLimit)
     return frequencyArray
   }
+}
+
+const filterFrequency = (frequency, lowerLimit, upperLimit) => {
+  if(frequency < lowerLimit) {
+    return lowerLimit
+  } else if (frequency > upperLimit) {
+    return upperLimit
+  }
+  return frequency
 }
 
 module.exports = filterFrequencies;
