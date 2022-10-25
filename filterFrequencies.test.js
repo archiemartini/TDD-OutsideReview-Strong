@@ -26,4 +26,8 @@ describe('the filterFrequencies function', () => {
     expect(filterFrequencies([39.9])).toEqual([40])
   })
 
+  it('filters 1500 correctly', () => {
+    expect(filterFrequencies([1500])).toEqual([1000])
+  })
+
 })

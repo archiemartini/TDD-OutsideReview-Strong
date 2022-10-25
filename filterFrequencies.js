@@ -1,6 +1,8 @@
 const filterFrequencies = (frequencyArray) => {
-  if(frequencyArray == 35 || frequencyArray == 1 || frequencyArray == 39.9) {
+  if(frequencyArray < 40) {
     return [40]
+  } else if (frequencyArray == 1500) {
+    return [1000]
   }
   return frequencyArray
 }
