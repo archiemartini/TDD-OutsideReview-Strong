@@ -1,0 +1,15 @@
+{
+  "name": "outsidereview2",
+  "version": "1.0.0",
+  "description": "Brief: - digital audio workstation plugins - band pass filter - three inputs: musicTrack, lowerLimit, upperLimit lowerLimit=40, upperLimit=1000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}
