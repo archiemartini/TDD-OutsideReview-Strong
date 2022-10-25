@@ -38,4 +38,8 @@ describe('the filterFrequencies function', () => {
     expect(filterFrequencies([1001])).toEqual([1000])
   })
 
+  it('function correctly filters to a personalised lowerLimit', () => {
+    expect(filterFrequencies([30], 80)).toEqual([80])
+  })
+
 })
