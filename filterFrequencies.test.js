@@ -18,4 +18,8 @@ describe('the filterFrequencies function', () => {
     expect(filterFrequencies([35])).toEqual([40])
   })
 
+  it('filters the number 1 correctly', () => {
+    expect(filterFrequencies([1])).toEqual([40])
+  })
+
 })
